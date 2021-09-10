@@ -23,6 +23,7 @@ public class PublisherController {
 	}
 	@RequestMapping("/publishers/pubId/{pubId}")
 	public void findById(@PathVariable int pubId) {
-		PublisherDto custs = publisherService.findById(pubId);
+		PublisherDto pub = publisherService.findById(pubId);
+		System.out.println(pub.toString());
 	}
 }

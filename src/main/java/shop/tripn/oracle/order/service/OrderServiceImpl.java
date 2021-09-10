@@ -22,12 +22,12 @@ public class OrderServiceImpl implements OrderService{
 	}
 
 	@Override
-	public OrderDto findByCustId(int custId) {
+	public List<OrderDto> findByCustId(int custId) {
 		return ordermapper.findByCustId(custId);
 	}
 
 	@Override
-	public OrderDto findByBookId(int bookId) {
+	public List<OrderDto> findByBookId(int bookId) {
 		return ordermapper.findByBookId(bookId);
 	}
 

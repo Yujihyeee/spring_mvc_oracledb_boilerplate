@@ -24,15 +24,22 @@ public class OrderController {
 	@RequestMapping("/orders/orderId/{orderId}")
 	public void findByOrderId(@PathVariable int orderId) {
 		OrderDto orders = orderService.findByOrderId(orderId);
+		System.out.println(orders.toString());
 	}
 	
 	@RequestMapping("/orders/custId/{custId}")
 	public void findByCustId(@PathVariable int custId) {
-		OrderDto orders = orderService.findByCustId(custId);
+		List<OrderDto> orders = orderService.findByCustId(custId);
+		for(OrderDto order : orders) {
+			System.out.println(order.toString());
+		}
 	}
 	
 	@RequestMapping("/orders/bookId/{bookId}")
 	public void findByBookId(@PathVariable int bookId) {
-		OrderDto orders = orderService.findByBookId(bookId);
+		List<OrderDto> orders = orderService.findByBookId(bookId);
+		for(OrderDto order : orders) {
+			System.out.println(order.toString());
+		}
 	}
 }

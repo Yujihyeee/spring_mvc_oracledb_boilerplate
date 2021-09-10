@@ -24,5 +24,6 @@ public class CustomerController {
 	@RequestMapping("/customers/custId/{custId}")
 	public void findById(@PathVariable int custId) {
 		CustomerDto custs = customerService.findById(custId);
+		System.out.println(custs.toString());
 	}
 }
