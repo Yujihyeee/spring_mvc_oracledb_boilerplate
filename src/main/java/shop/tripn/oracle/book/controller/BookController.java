@@ -21,6 +21,21 @@ public class BookController {
 			System.out.println(book.toString());
 		}
 	}
-	
-	
+	@RequestMapping("/books/bookId/{bookId}")
+	public void findById(@PathVariable int bookId) {
+		BookDto book = bookService.findById(bookId);
+		System.out.println(book.toString());
+	}
+	@RequestMapping("/books/pubId/{pubId}")
+	public void findByPubId(@PathVariable int pubId) {
+		List<BookDto> books = bookService.findByPubId(pubId);
+	}
+	@RequestMapping("/books/bookTitle/{bookTitle}")
+	public void findByBookTitle(@PathVariable String bookTitle) {
+		List<BookDto> books = bookService.findByBookTitle(bookTitle);
+	}
+	@RequestMapping("/books/price/{price}")
+	public void findByPrice(@PathVariable int price) {
+		List<BookDto> books = bookService.findByPrice(price);
+	}
 }

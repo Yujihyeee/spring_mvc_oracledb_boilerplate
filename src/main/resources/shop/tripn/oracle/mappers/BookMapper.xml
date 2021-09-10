@@ -19,7 +19,7 @@
 		from books
         where book_id like ${bookId}
 	</select>
-<!-- 	<select id="findByPubId" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findByPubId" resultType="shop.tripn.oracle.mappers.BookMapper"
 	parameterType="int">
 		select
             book_id bookId,
@@ -29,7 +29,7 @@
 		from books
         where pub_id like ${pubId}
 	</select>
-	<select id="findbyBookTitle" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findByBookTitle" resultType="shop.tripn.oracle.mappers.BookMapper"
 	parameterType="string">
 	select
             book_id bookId,
@@ -38,5 +38,15 @@
 			pub_id pubId
 		from books
         where book_title like '축%'
-	</select> -->
+	</select>
+	<select id="findByPrice" resultType="shop.tripn.oracle.mappers.BookMapper"
+	parameterType="int">
+	select
+            book_id bookId,
+        	book_title bookTitle,
+    		price,
+			pub_id pubId
+		from books
+        where price >= ${price}
+	</select>
 </mapper>
