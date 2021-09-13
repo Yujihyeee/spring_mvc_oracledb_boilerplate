@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="shop.tripn.oracle.mappers.OrderMapper">
-	<select id="findAll" resultType="shop.tripn.oracle.mappers.OrderMapper">
+	<select id="findAll" resultType="shop.tripn.oracle.order.domain.OrderDto">
 	select
 	    order_id orderId,
 	    cust_id custId,
@@ -10,7 +10,7 @@
 	    order_date orderDate
     from orders
 	</select>
-	<select id="findByOrderId" resultType="shop.tripn.oracle.mappers.OrderMapper"
+	<select id="findByOrderId" resultType="shop.tripn.oracle.order.domain.OrderDto"
 	parameterType="int">
 	select
 	    order_id orderId,
@@ -21,7 +21,7 @@
     from orders
     where order_id like ${orderId}
 	</select>
-	<select id="findByCustId" resultType="shop.tripn.oracle.mappers.OrderMapper"
+	<select id="findByCustId" resultType="shop.tripn.oracle.order.domain.OrderDto"
 	parameterType="int">
 	select
 	    order_id orderId,
@@ -32,7 +32,7 @@
     from orders
     where cust_id like ${custId}
 	</select>
-	<select id="findByBookId" resultType="shop.tripn.oracle.mappers.OrderMapper"
+	<select id="findByBookId" resultType="shop.tripn.oracle.order.domain.OrderDto"
 	parameterType="int">
 	select
 	    order_id orderId,
@@ -43,4 +43,9 @@
     from orders
     where book_id like ${bookId}
 	</select>
+	<insert id="save" parameterType="shop.tripn.oracle.order.domain.OrderDto">
+		insert into
+		orders(order_id, cust_id, book_id, order_price, order_date)
+		values(#{orderId}, #{custId}, #{bookId}, #{orderPrice}, #{orderDate})
+	</insert>
 </mapper>

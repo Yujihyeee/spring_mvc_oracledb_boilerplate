@@ -6,13 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import shop.tripn.oracle.book.domain.BookDto;
 import shop.tripn.oracle.book.service.BookService;
 
 @Controller
+@RequestMapping("/books")
 public class BookController {
 	@Autowired BookService bookService;
+	@Autowired BookDto book;
 	
 	@RequestMapping("/books")
 	public void findAll() {
@@ -46,5 +50,24 @@ public class BookController {
 		for(BookDto book : books) {
 			System.out.println(book.toString());
 		}
+	}
+	
+	@RequestMapping(value="/join", method = {RequestMethod.POST})
+	public String join(
+			@RequestParam("bookId") int bookId,
+			@RequestParam("bookTitle") String bookTitle,
+			@RequestParam("price") int price,
+			@RequestParam("pubId") int pubId) {
+		System.out.println("bookId :" + bookId);
+		System.out.println("bookTitle :" + bookTitle);
+		System.out.println("price :" + price);
+		System.out.println("pubId :" + pubId);
+		book = new BookDto();
+		book.setBookId(bookId);
+		book.setBookTitle(bookTitle);
+		book.setPrice(price);
+		book.setPubId(pubId);
+		bookService.save(book);
+		return "회원가입 성공";
 	}
 }

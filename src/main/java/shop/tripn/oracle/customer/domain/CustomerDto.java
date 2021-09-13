@@ -9,7 +9,7 @@ public class CustomerDto {
 	private int custId;
 	private String custName;
 	private String address;
-	private int custPhone;
+	private String custPhone;
 	
 	public int getCustId() {
 		return custId;
@@ -29,10 +29,10 @@ public class CustomerDto {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getCustPhone() {
+	public String getCustPhone() {
 		return custPhone;
 	}
-	public void setCustPhone(int custPhone) {
+	public void setCustPhone(String custPhone) {
 		this.custPhone = custPhone;
 	}
 	

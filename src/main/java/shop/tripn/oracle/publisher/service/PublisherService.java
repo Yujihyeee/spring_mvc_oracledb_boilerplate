@@ -10,4 +10,8 @@ import shop.tripn.oracle.publisher.domain.PublisherDto;
 public interface PublisherService {
 	public List<PublisherDto> findAll();
 	public PublisherDto findById(int pubId);
+	public PublisherDto findByName(String pubName);
+	public PublisherDto findByMgrName(String mgrName);
+	public PublisherDto findByPhone(String phone);
+	void save(PublisherDto publisher);
 }

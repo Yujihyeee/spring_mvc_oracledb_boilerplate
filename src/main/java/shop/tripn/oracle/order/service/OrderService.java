@@ -12,5 +12,5 @@ public interface OrderService {
 	public OrderDto findByOrderId(int orderId);
 	public List<OrderDto> findByCustId(int custId);
 	public List<OrderDto> findByBookId(int bookId);
-	
+	void save(OrderDto order);
 }

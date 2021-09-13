@@ -31,4 +31,9 @@ public class OrderServiceImpl implements OrderService{
 		return ordermapper.findByBookId(bookId);
 	}
 
+	@Override
+	public void save(OrderDto order) {
+		ordermapper.save(order);
+	}
+
 }

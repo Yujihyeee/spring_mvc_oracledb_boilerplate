@@ -32,5 +32,8 @@ public class BookServiceImpl implements BookService{
 	public List<BookDto> findByPrice(int price) {
 		return null;
 	}
-
+	@Override
+	public void save(BookDto book) {
+		bookmapper.save(book);
+	}
 }

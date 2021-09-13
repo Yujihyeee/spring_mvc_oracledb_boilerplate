@@ -20,5 +20,25 @@ public class CustomerServiceImpl implements CustomerService{
 	public CustomerDto findById(int custId) {
 		return customermapper.findById(custId);
 	}
+	
+	@Override
+	public void save(CustomerDto customer) {
+		customermapper.save(customer);
+	}
+
+	@Override
+	public CustomerDto findByName(String custName) {
+		return customermapper.findByName(custName);
+	}
+
+	@Override
+	public CustomerDto findByAddress(String address) {
+		return customermapper.findByAddress(address);
+	}
+
+	@Override
+	public CustomerDto findByPhone(String custPhone) {
+		return customermapper.findByPhone(custPhone);
+	}
 
 }

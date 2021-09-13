@@ -19,4 +19,23 @@ public class PublisherServiceImpl implements PublisherService{
 		return publishermapper.findById(pubId);
 	}
 
+	@Override
+	public PublisherDto findByName(String pubName) {
+		return publishermapper.findByName(pubName);
+	}
+
+	@Override
+	public PublisherDto findByMgrName(String mgrName) {
+		return publishermapper.findByMgrName(mgrName);
+	}
+
+	@Override
+	public PublisherDto findByPhone(String phone) {
+		return publishermapper.findByPhone(phone);
+	}
+
+	@Override
+	public void save(PublisherDto publisher) {
+		publishermapper.save(publisher);
+	}
 }

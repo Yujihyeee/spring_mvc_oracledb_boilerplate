@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="shop.tripn.oracle.mappers.PublisherMapper">
-	<select id="findAll" resultType="shop.tripn.oracle.mappers.PublisherMapper">
+	<select id="findAll" resultType="shop.tripn.oracle.publisher.domain.PublisherDto">
 	select
 	    pub_id pubId,
 	    pub_name pubName,
@@ -9,7 +9,7 @@
 	    phone
     from publishers
 	</select>
-	<select id="findById" resultType="shop.tripn.oracle.mappers.PublisherMapper"
+	<select id="findById" resultType="shop.tripn.oracle.publisher.domain.PublisherDto"
 	parameterType="int">
 	select
 	    pub_id pubId,
@@ -19,4 +19,9 @@
     from publishers
     where pub_id like ${pubId}
 	</select>
+	<insert id="save" parameterType="shop.tripn.oracle.publisher.domain.PublisherDto">
+		insert into
+		publishers(pub_id, pub_name, mgr_name, phone)
+		values(#{pubId}, #{pubName},#{mgrName},#{phone})
+	</insert>
 </mapper>

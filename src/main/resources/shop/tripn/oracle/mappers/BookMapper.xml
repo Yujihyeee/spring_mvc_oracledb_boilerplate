@@ -9,7 +9,7 @@
 				pub_id pubId
 		from books
 	</select>
-	<select id="findById" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findById" resultType="shop.tripn.oracle.book.domain.BookDto"
 	parameterType="int">
 	select
             book_id bookId,
@@ -19,7 +19,7 @@
 		from books
         where book_id like ${bookId}
 	</select>
-	<select id="findByPubId" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findByPubId" resultType="shop.tripn.oracle.book.domain.BookDto"
 	parameterType="int">
 		select
             book_id bookId,
@@ -29,7 +29,7 @@
 		from books
         where pub_id like ${pubId}
 	</select>
-	<select id="findByBookTitle" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findByBookTitle" resultType="shop.tripn.oracle.book.domain.BookDto"
 	parameterType="string">
 	select
             book_id bookId,
@@ -39,7 +39,7 @@
 		from books
         where book_title like '축%'
 	</select>
-	<select id="findByPrice" resultType="shop.tripn.oracle.mappers.BookMapper"
+	<select id="findByPrice" resultType="shop.tripn.oracle.book.domain.BookDto"
 	parameterType="int">
 	select
             book_id bookId,
@@ -49,4 +49,9 @@
 		from books
         where price >= ${price}
 	</select>
+	<insert id="save" parameterType="shop.tripn.oracle.book.domain.BookDto">
+		insert into
+		books(book_id, book_title, price, pub_id)
+		values(#{bookId}, #{bookTitle}, #{price}, #{pubId})
+	</insert>
 </mapper>

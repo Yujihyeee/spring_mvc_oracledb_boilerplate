@@ -13,4 +13,5 @@ public interface BookMapper {
 	public BookDto findByPubId(int pubId);
 	public BookDto findByBookTitle(String bookTitle);
 	public BookDto findByPrice(int price);
+	void save(BookDto book);
 }

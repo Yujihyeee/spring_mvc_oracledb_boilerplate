@@ -11,4 +11,8 @@ import shop.tripn.oracle.customer.domain.CustomerDto;
 public interface CustomerService {
 	public List<CustomerDto> findAll();
 	public CustomerDto findById(int custId);
+	public CustomerDto findByName(String custName);
+	public CustomerDto findByAddress(String address);
+	public CustomerDto findByPhone(String custPhone);
+	void save(CustomerDto customer);
 }

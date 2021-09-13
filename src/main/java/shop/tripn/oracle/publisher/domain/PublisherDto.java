@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 public class PublisherDto {
 	private int pubId;
 	private String pubName;
-	private String mrgName;
-	private int phone;
+	private String mgrName;
+	private String phone;
 	
 	public int getPubId() {
 		return pubId;
@@ -21,18 +21,16 @@ public class PublisherDto {
 	public void setPubName(String pubName) {
 		this.pubName = pubName;
 	}
-	public String getMrgName() {
-		return mrgName;
+	public String getMgrName() {
+		return mgrName;
 	}
-	public void setMrgName(String mrgName) {
-		this.mrgName = mrgName;
+	public void setMgrName(String mgrName) {
+		this.mgrName = mgrName;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
-	
 }
