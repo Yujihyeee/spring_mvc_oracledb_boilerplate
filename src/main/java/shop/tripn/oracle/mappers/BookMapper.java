@@ -5,9 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import shop.tripn.oracle.book.domain.BookDto;
+import shop.tripn.oracle.common.GenericInterface;
 
 @Repository
-public interface BookMapper {
+public interface BookMapper extends GenericInterface<BookDto, Integer>{
 	public List<BookDto> findAll();
 	public BookDto findById(int bookId);
 	public BookDto findByPubId(int pubId);

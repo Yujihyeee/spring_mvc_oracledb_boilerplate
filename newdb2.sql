@@ -4,7 +4,7 @@ select
         	book_title bookTitle,
     		price,
 			pub_id pubId
-		from books
+		from books;
         WHERE book_id LIKE 8
         ;
 
@@ -16,7 +16,7 @@ select
     cust_name custName,
     address,
     cust_phone custPhone
-    from customers
+    from customers;
     where cust_id like cust_id;
     
     
@@ -26,6 +26,7 @@ select
     mgr_name mgrName,
     phone
     from publishers;
+    
     
 
 select  * FROM orders;

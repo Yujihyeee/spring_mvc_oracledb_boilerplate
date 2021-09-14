@@ -70,34 +70,5 @@ span.psw {
 </head>
 <body>
 
-<h2>Join Form2</h2>
-
-<form action="${contextPath}/books/join" method="post">
-
-  <div class="container">
-    <label for="bookId"><b>bookId</b></label>
-    <input type="text" placeholder="Enter ID" name="bookId" required>
-
-    <label for="bookTitle"><b>bookTitle</b></label>
-    <input type="text" placeholder="Enter bookTitle" name="bookTitle" required>
-    
-    <label for="price"><b>price</b></label>
-    <input type="text" placeholder="Enter price" name="price" required>
-    
-    <label for="pubId"><b>pubId</b></label>
-    <input type="text" placeholder="Enter pubId" name="pubId" required>
-        
-    <button type="submit">Join</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
 </body>
 </html>

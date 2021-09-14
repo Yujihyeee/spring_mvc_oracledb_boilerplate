@@ -6,15 +6,19 @@
 <jsp:include page="../common/head.jsp"/>
 <body>
 
-<h2>Login Form</h2>
+<h2>Join Form</h2>
 
 <form action="${contextPath}/customers" method="post">
   <div class="container">
+    <label for="custId"><b>custId</b></label>
+    	<input type="text" placeholder="Enter ID" name="custId" required>
     <label for="custName"><b>custName</b></label>
-	    <input type="text" placeholder="Enter custName" name="custName" required>
+    	<input type="text" placeholder="Enter name" name="custName" required>
+    <label for="address"><b>address</b></label>
+    	<input type="text" placeholder="Enter address" name="address" required>
     <label for="custPhone"><b>custPhone</b></label>
-    	<input type="password" placeholder="Enter custPhone" name="custPhone" required>
-    <button type="submit">Login</button>
+	    <input type="text" placeholder="Enter phone" name="custPhone" required>
+    <button type="submit">Join</button>
   </div>
 </form>
 </body>

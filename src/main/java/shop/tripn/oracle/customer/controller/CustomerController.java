@@ -49,7 +49,14 @@ public class CustomerController {
 		return "회원가입 성공";
 	}
 	@RequestMapping(value="/login", method= {RequestMethod.POST})
-	public String login() {
+	public String login(
+			@RequestParam("custId") int custId,
+			@RequestParam("custName") String custName) {
+			System.out.println("custId : " + custId);
+			System.out.println("custName : " + custName);
+			customer = new CustomerDto();
+			customer.setCustId(custId);
+			customer.setCustName(custName);
 		return "로그인 성공";
 	}
 }

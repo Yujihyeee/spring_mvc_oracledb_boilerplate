@@ -1,4 +1,4 @@
-package shop.tripn.oracle;
+package shop.tripn.oracle.common;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
