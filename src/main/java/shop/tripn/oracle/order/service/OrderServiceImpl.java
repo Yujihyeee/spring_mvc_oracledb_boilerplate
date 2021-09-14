@@ -11,47 +11,30 @@ import shop.tripn.oracle.order.domain.OrderDto;
 @Service
 public class OrderServiceImpl implements OrderService{
 	@Autowired OrderMapper ordermapper;
+
+	@Override
+	public void save(OrderDto t) {
+		ordermapper.save(t);
+	}
+
+	@Override
+	public OrderDto findById(Integer id) {
+		return ordermapper.findById(id);
+	}
+
 	@Override
 	public List<OrderDto> findAll() {
 		return ordermapper.findAll();
 	}
 
 	@Override
-	public OrderDto findByOrderId(int orderId) {
-		return ordermapper.findByOrderId(orderId);
-	}
-
-	@Override
-	public List<OrderDto> findByCustId(int custId) {
-		return ordermapper.findByCustId(custId);
-	}
-
-	@Override
-	public List<OrderDto> findByBookId(int bookId) {
-		return ordermapper.findByBookId(bookId);
-	}
-
-	@Override
-	public void save(OrderDto order) {
-		ordermapper.save(order);
-	}
-
-	@Override
-	public OrderDto findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public void update(OrderDto t) {
-		// TODO Auto-generated method stub
-		
+		ordermapper.update(t);
 	}
 
 	@Override
 	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-		
+		ordermapper.delete(id);
 	}
 
 }

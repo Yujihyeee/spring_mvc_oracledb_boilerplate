@@ -24,25 +24,5 @@ public class HomeController {
 		session.setAttribute("contextPath", contextPath );
 		return "index";
 	}
-	@RequestMapping(value = "/joinform", method = RequestMethod.GET)
-	public String join() {
-		
-		return "/customers/Join";
-	}
-	@RequestMapping("/loginform")
-	public String login() {
-		return "/customers/Login";
-	}
-	@RequestMapping("/joinform2")
-	public String join2() {
-		return "/books/Join";
-	}
-	@RequestMapping("/publisherform")
-	public String join3() {
-		return "/publishers/Join";
-	}
-	@RequestMapping("/orderform")
-	public String join4() {
-		return "/orders/Join";
-	}
+	
 }

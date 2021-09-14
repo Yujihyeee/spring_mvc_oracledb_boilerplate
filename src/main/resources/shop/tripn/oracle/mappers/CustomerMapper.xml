@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="shop.tripn.oracle.mappers.CustomerMapper">
-	<select id="findAll" resultType="shop.tripn.oracle.customer.domain.CustomerDto">
+	<insert id="save" parameterType="customer">
+		insert into
+		customers(cust_id, cust_name, address, cust_phone)
+		values(${custId}, #{custName}, #{address}, #{custPhone})
+	</insert>
+	<select id="findAll" resultType="customer">
 		select
 		    cust_id custId,
 		    cust_name custName,
@@ -9,7 +14,7 @@
 		    cust_phone custPhone
 		from customers
 	</select>
-	<select id="findById" resultType="shop.tripn.oracle.customer.domain.CustomerDto"
+	<select id="findById" resultType="customer"
 	parameterType="int">
 		select
 		    cust_id custId,
@@ -19,9 +24,15 @@
 		from customers
 		where cust_id like ${custId}
 	</select>
-	<insert id="save" parameterType="shop.tripn.oracle.customer.domain.CustomerDto">
-		insert into
-		customers(cust_id, cust_name, address, cust_phone)
-		values(${custId}, #{custName}, #{address}, #{custPhone})
-	</insert>
+	<update id="update" parameterType="int">
+		update customers set
+			custName = #{custName},
+			address = #{address},
+			custPhone = #{custPhone}
+		where cust_id like #{custId}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete from customers
+		where cust_id like #{custId}
+	</delete>
 </mapper>

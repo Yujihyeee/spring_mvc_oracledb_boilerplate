@@ -12,45 +12,29 @@ import shop.tripn.oracle.mappers.CustomerMapper;
 public class CustomerServiceImpl implements CustomerService{
 	@Autowired CustomerMapper customermapper;
 
-	public List<CustomerDto> findAll() {
-		return customermapper.findAll();
-	}
-
-	public CustomerDto findById(int custId) {
-		return customermapper.findById(custId);
-	}
-	
-	/*
-	 * public void save(CustomerDto customer) { customermapper.save(customer); }
-	 */
-
-	public CustomerDto findByName(String custName) {
-		return customermapper.findByName(custName);
-	}
-
-	public CustomerDto findByAddress(String address) {
-		return customermapper.findByAddress(address);
-	}
-
-	public CustomerDto findByPhone(String custPhone) {
-		return customermapper.findByPhone(custPhone);
-	}
-
 	@Override
 	public void save(CustomerDto t) {
+		customermapper.save(t);
 	}
 
 	@Override
 	public CustomerDto findById(Integer id) {
-		return null;
+		return customermapper.findById(id);
+	}
+
+	@Override
+	public List<CustomerDto> findAll() {
+		return customermapper.findAll();
 	}
 
 	@Override
 	public void update(CustomerDto t) {
+		customermapper.update(t);
 	}
 
 	@Override
 	public void delete(Integer id) {
+		customermapper.delete(id);
 	}
 	
 }

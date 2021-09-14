@@ -9,33 +9,30 @@ import shop.tripn.oracle.publisher.domain.PublisherDto;
 @Service
 public class PublisherServiceImpl implements PublisherService{
 	@Autowired PublisherMapper publishermapper;
+
+	@Override
+	public void save(PublisherDto t) {
+		publishermapper.save(t);
+	}
+
+	@Override
+	public PublisherDto findById(Integer id) {
+		return publishermapper.findById(id);
+	}
+
 	@Override
 	public List<PublisherDto> findAll() {
 		return publishermapper.findAll();
 	}
 
 	@Override
-	public PublisherDto findById(int pubId) {
-		return publishermapper.findById(pubId);
+	public void update(PublisherDto t) {
+		publishermapper.update(t);
 	}
 
 	@Override
-	public PublisherDto findByName(String pubName) {
-		return publishermapper.findByName(pubName);
+	public void delete(Integer id) {
+		publishermapper.delete(id);
 	}
-
-	@Override
-	public PublisherDto findByMgrName(String mgrName) {
-		return publishermapper.findByMgrName(mgrName);
-	}
-
-	@Override
-	public PublisherDto findByPhone(String phone) {
-		return publishermapper.findByPhone(phone);
-	}
-
-	@Override
-	public void save(PublisherDto publisher) {
-		publishermapper.save(publisher);
-	}
+	
 }
