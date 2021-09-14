@@ -8,7 +8,7 @@
 
 <h2>Login Form</h2>
 
-<form action="${contextPath}/customers" method="post">
+<form action="<%= application.getContextPath() %>/customers" method="post">
   <div class="container">
     <label for="custName"><b>custName</b></label>
 	    <input type="text" placeholder="Enter custName" name="custName" required>

@@ -6,9 +6,9 @@
 <jsp:include page="../common/head.jsp"/>
 <body>
 
-<h2>Join Form</h2>
+<h2>책 정보 수정</h2>
 
-<form action="${contextPath}/books" method="post">
+<form action="<%= application.getContextPath() %>/books" method="post">
   <div class="container">
     <label for="bookId"><b>bookId</b></label>
     	<input type="text" placeholder="Enter ID" name="bookId" required>
@@ -18,7 +18,7 @@
     	<input type="text" placeholder="Enter price" name="price" required>
     <label for="pubId"><b>pubId</b></label>
     	<input type="text" placeholder="Enter pubId" name="pubId" required>
-    <button type="submit">Join</button>
+    <button type="submit">수정</button>
   </div>
 </form>
 </body>

@@ -8,7 +8,7 @@
 
 <h2>OrderUpdate</h2>
 
-<form action="${contextPath}/orders" method="post">
+<form action="<%= application.getContextPath() %>/orders" method="post">
   <div class="container">
   	<label for="orderId"><b>orderId</b></label>
 	    <input type="text" placeholder="Enter ID" name="orderId" required>
@@ -20,7 +20,7 @@
 	    <input type="text" placeholder="Enter orderPrice" name="orderPrice" required>
     <label for="orderDate"><b>orderDate</b></label>
 	    <input type="text" placeholder="Enter orderDate" name="orderDate" required>
-    <button type="submit">Join</button>
+    <button type="submit">Update</button>
   </div>
 </form>
 </body>

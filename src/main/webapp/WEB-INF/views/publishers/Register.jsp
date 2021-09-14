@@ -18,7 +18,7 @@
 	    <input type="text" placeholder="Enter mgrName" name="mgrName" required>
     <label for="phone"><b>phone</b></label>
 	    <input type="text" placeholder="Enter phone" name="phone" required>
-    <button type="submit">Join</button>
+    <button type="submit">Register</button>
   </div>
 </form>
 </body>

@@ -15,23 +15,23 @@ import shop.tripn.oracle.customer.service.CustomerService;
 public class CustomerController{
 	@Autowired CustomerService customerService;
 	
-	@RequestMapping("/customers")
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public void save(CustomerDto t) {
 		customerService.save(t);
 	}
-	@RequestMapping("/customers")
+	@RequestMapping("/detail/{id}")
 	public CustomerDto findById(Integer id) {
 		return customerService.findById(id);
 	}
-	@RequestMapping("/customers")
+	@RequestMapping("/")
 	public List<CustomerDto> findAll() {
 		return customerService.findAll();
 	}
-	@RequestMapping(value = "/customers", method = RequestMethod.POST)
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public void update(@RequestBody CustomerDto t) {
 		customerService.update(t);
 	}
-	@RequestMapping(value = "/customers", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void delete(@PathVariable Integer id) {
 		customerService.delete(id);
 	}

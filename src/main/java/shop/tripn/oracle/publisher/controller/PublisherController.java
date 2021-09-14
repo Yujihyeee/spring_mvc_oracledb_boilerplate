@@ -15,27 +15,27 @@ import shop.tripn.oracle.publisher.service.PublisherService;
 public class PublisherController {
 	@Autowired PublisherService publisherService;
 
-	@RequestMapping("")
+	@RequestMapping("/register")
 	public void save(PublisherDto t) {
 		publisherService.save(t);
 	}
 
-	@RequestMapping("")
+	@RequestMapping("/datail/{id}")
 	public PublisherDto findById(Integer id) {
 		return publisherService.findById(id);
 	}
 
-	@RequestMapping("")
+	@RequestMapping("/")
 	public List<PublisherDto> findAll() {
 		return publisherService.findAll();
 	}
 
-	@RequestMapping(value = "/publishers", method = RequestMethod.POST)
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public void update(@RequestBody PublisherDto t) {
 		publisherService.update(t);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void delete(@PathVariable Integer id) {
 		publisherService.delete(id);
 	}

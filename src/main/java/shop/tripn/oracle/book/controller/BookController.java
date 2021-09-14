@@ -14,26 +14,30 @@ import shop.tripn.oracle.book.service.BookService;
 @RequestMapping("/books")
 public class BookController {
 	@Autowired BookService bookService;
+	@Autowired BookDto book;
 	
-	@RequestMapping("")
-	public String save(BookDto t) {
-		bookService.save(t);
+	@RequestMapping("/register")
+	public String save(BookDto book) {
+		bookService.save(book);
 		return "";
 	}
-	@RequestMapping("")
+	@RequestMapping("/asd")
 	public BookDto findById(Integer id) {
 		return bookService.findById(id);
 	}
-	@RequestMapping("")
-	public List<BookDto> findAll() {
-		return bookService.findAll();
+	@RequestMapping("/detail/{id}")
+	public String findAll() {
+		List<BookDto> books = bookService.findAll();
+		for(BookDto book : books) {
+			System.out.println(book.toString());
+		}
+		return "조회 완료";
 	}
-	@RequestMapping(value = "/books", method = RequestMethod.POST)
-	public String update(@RequestBody BookDto t) {
-		bookService.update(t);
-		return "";
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public void update(@RequestBody BookDto book) {
+		bookService.update(book);
 	}
-	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public void delete(@PathVariable Integer id) {
 		bookService.delete(id);
 	}

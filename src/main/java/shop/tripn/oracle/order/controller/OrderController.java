@@ -15,11 +15,11 @@ import shop.tripn.oracle.order.service.OrderService;
 public class OrderController {
 	@Autowired OrderService orderservice;
 
-	@RequestMapping("/save")
+	@RequestMapping("/register")
 	public void save(OrderDto t) {
 		orderservice.save(t);
 	}
-	@RequestMapping("/find/{id}")
+	@RequestMapping("/datail/{id}")
 	public OrderDto findById(Integer id) {
 		return orderservice.findById(id);
 	}

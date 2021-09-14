@@ -8,7 +8,7 @@
 
 <h2>책 추가</h2>
 
-<form action="${contextPath}/books" method="post">
+<form action="<%= application.getContextPath() %>/books" method="post">
   <div class="container">
     <label for="bookId"><b>bookId</b></label>
 	    <input type="text" placeholder="Enter ID" name="bookId" required>
@@ -18,7 +18,7 @@
     	<input type="text" placeholder="Enter price" name="price" required>
     <label for="pubId"><b>pubId</b></label>
     	<input type="text" placeholder="Enter pubId" name="pubId" required>
-    <button type="submit">Join</button>
+    <button type="submit">책 추가</button>
   </div>
 </form>
 </body>

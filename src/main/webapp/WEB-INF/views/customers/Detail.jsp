@@ -6,9 +6,9 @@
 <jsp:include page="../common/head.jsp"/>
 <body>
 
-<h2>상세</h2>
+<h2>고객 상세</h2>
 
-<form action="${contextPath}/customers" method="post">
+<form action="<%= application.getContextPath() %>/customers" method="post">
   <div class="container">
     <label for="custId"><b>custId</b></label>
     	<input type="text" placeholder="Enter ID" name="custId" required>
@@ -18,7 +18,7 @@
     	<input type="text" placeholder="Enter address" name="address" required>
     <label for="custPhone"><b>custPhone</b></label>
 	    <input type="text" placeholder="Enter phone" name="custPhone" required>
-    <button type="submit">Join</button>
+    <button type="submit">상세 보기</button>
   </div>
 </form>
 </body>

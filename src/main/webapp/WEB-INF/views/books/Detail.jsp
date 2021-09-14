@@ -4,12 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <jsp:include page="../common/head.jsp"/>
-
 <body>
 
 <h2>책 상세</h2>
 
-<form action="${contextPath}/books" method="post">
+<form action="<%= application.getContextPath() %>/books" method="post">
   <div class="container">
     <label for="bookId"><b>bookId</b></label>
 	    <input type="text" placeholder="Enter ID" name="bookId" required>
@@ -19,7 +18,7 @@
     	<input type="text" placeholder="Enter price" name="price" required>
     <label for="pubId"><b>pubId</b></label>
     	<input type="text" placeholder="Enter pubId" name="pubId" required>
-    <button type="submit">Join</button>
+    <button type="submit">상세 보기</button>
   </div>
 </form>
 </body>
