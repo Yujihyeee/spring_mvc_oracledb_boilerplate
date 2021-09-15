@@ -1,9 +1,9 @@
 package shop.tripn.oracle.photo.controller;
 
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import shop.tripn.oracle.photo.domain.PhotoDto;
 import shop.tripn.oracle.photo.service.PhotoService;
 
@@ -13,23 +13,15 @@ public class PhotoController {
 	@Autowired PhotoService photoService;
 	@Autowired PhotoDto photo;
 	
-	@RequestMapping
+	@RequestMapping(value = "register", method = RequestMethod.POST)
 	public void save(PhotoDto t) {
 		photoService.save(t);
 	}
-	@RequestMapping
-	public PhotoDto findById(Integer id) {
-		return photoService.findById(id);
-	}
-	@RequestMapping
-	public List<PhotoDto> findAll() {
-		return photoService.findAll();
-	}
-	@RequestMapping
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public void update(PhotoDto t) {
 		photoService.update(t);
 	}
-	@RequestMapping
+	@RequestMapping("/delete")
 	public void delete(Integer id) {
 		photoService.delete(id);
 	}	
