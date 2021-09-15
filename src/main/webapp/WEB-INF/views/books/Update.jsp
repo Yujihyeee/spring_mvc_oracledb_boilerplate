@@ -8,7 +8,7 @@
 
 <h2>책 정보 수정</h2>
 
-<form action="<%= application.getContextPath() %>/books" method="post">
+<form action="<%= application.getContextPath() %>/books/update" method="post">
   <div class="container">
     <label for="bookId"><b>bookId</b></label>
     	<input type="text" placeholder="Enter ID" name="bookId" required>

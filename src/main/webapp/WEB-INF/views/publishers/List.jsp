@@ -8,7 +8,7 @@
 
 <h2>PublishersList</h2>
 
-<form action="${contextPath}/publishers" method="post">
+<form action="<%= application.getContextPath() %>/publishers/list" method="post">
   <div class="container">
     <label for="pubId"><b>pubId</b></label>
 	    <input type="text" placeholder="Enter ID" name="pubId" required>

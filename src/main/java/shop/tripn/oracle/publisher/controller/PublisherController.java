@@ -15,17 +15,17 @@ import shop.tripn.oracle.publisher.service.PublisherService;
 public class PublisherController {
 	@Autowired PublisherService publisherService;
 
-	@RequestMapping("/register")
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public void save(PublisherDto t) {
 		publisherService.save(t);
 	}
 
-	@RequestMapping("/datail/{id}")
+	@RequestMapping
 	public PublisherDto findById(Integer id) {
 		return publisherService.findById(id);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	public List<PublisherDto> findAll() {
 		return publisherService.findAll();
 	}

@@ -16,16 +16,16 @@ public class BookController {
 	@Autowired BookService bookService;
 	@Autowired BookDto book;
 	
-	@RequestMapping("/register")
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String save(BookDto book) {
 		bookService.save(book);
-		return "";
+		return "등록 완료";
 	}
-	@RequestMapping("/asd")
+	@RequestMapping
 	public BookDto findById(Integer id) {
 		return bookService.findById(id);
 	}
-	@RequestMapping("/detail/{id}")
+	@RequestMapping(value = "/detail", method = RequestMethod.POST)
 	public String findAll() {
 		List<BookDto> books = bookService.findAll();
 		for(BookDto book : books) {

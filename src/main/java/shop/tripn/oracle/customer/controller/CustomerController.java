@@ -19,11 +19,11 @@ public class CustomerController{
 	public void save(CustomerDto t) {
 		customerService.save(t);
 	}
-	@RequestMapping("/detail/{id}")
+	@RequestMapping(value = "/detail", method = RequestMethod.POST)
 	public CustomerDto findById(Integer id) {
 		return customerService.findById(id);
 	}
-	@RequestMapping("/")
+	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	public List<CustomerDto> findAll() {
 		return customerService.findAll();
 	}

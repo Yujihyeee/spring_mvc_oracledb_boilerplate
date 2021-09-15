@@ -8,7 +8,7 @@
 
 <h2>고개 정보 수정</h2>
 
-<form action="<%= application.getContextPath() %>/customers" method="post">
+<form action="<%= application.getContextPath() %>/customers/update" method="post">
   <div class="container">
     <label for="custId"><b>custId</b></label>
 	    <input type="text" placeholder="Enter ID" name="custId" required>

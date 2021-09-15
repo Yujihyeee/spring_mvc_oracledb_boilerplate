@@ -15,15 +15,15 @@ import shop.tripn.oracle.order.service.OrderService;
 public class OrderController {
 	@Autowired OrderService orderservice;
 
-	@RequestMapping("/register")
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public void save(OrderDto t) {
 		orderservice.save(t);
 	}
-	@RequestMapping("/datail/{id}")
+	@RequestMapping
 	public OrderDto findById(Integer id) {
 		return orderservice.findById(id);
 	}
-	@RequestMapping("/list")
+	@RequestMapping(value = "/list", method = RequestMethod.POST)
 	public List<OrderDto> findAll() {
 		return orderservice.findAll();
 	}

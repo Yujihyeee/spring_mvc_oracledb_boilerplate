@@ -8,7 +8,7 @@
 
 <h2>OrderRegister</h2>
 
-<form action="<%= application.getContextPath() %>/orders" method="post">
+<form action="<%= application.getContextPath() %>/orders/register" method="post">
   <div class="container">
   	<label for="orderId"><b>orderId</b></label>
 	    <input type="text" placeholder="Enter ID" name="orderId" required>

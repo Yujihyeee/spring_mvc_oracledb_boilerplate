@@ -21,74 +21,74 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping("book/detail") 
+	@RequestMapping("/books/detail") 
 	  public String BookDetail() { 
 		  return "/books/Detail"; 
 		  }
-	  @RequestMapping("book/register") 
+	  @RequestMapping("/books/register") 
 	  public String BookRegister() { 
 		  return "/books/Register"; 
 		  }
-	  @RequestMapping("book/update") 
+	  @RequestMapping("/books/update") 
 	  public String BookUpdate() { 
 		  return "/books/Update"; 
 		  }
-	  @RequestMapping("book/update") 
+	  @RequestMapping("/books/list") 
 	  public String BookList() { 
 		  return "/books/List"; 
 		  }
 	
-	  @RequestMapping("customer/join") 
+	  @RequestMapping("/customers/join") 
 	  public String Join() { 
 		  return "/customers/Join"; 
 	  }
-	  @RequestMapping("customer/login") 
+	  @RequestMapping("/customers/login") 
 	  public String Login() { 
 		  return "/customers/Login"; 
 		  }
-	  @RequestMapping("customer/detail") 
+	  @RequestMapping("/customers/detail") 
 	  public String Detail() { 
 		  return "/customers/Detail"; 
 		  }
-	  @RequestMapping("customer/register") 
+	  @RequestMapping("/customers/register") 
 	  public String Register() { 
 		  return "/customers/Register"; 
 		  }
-	  @RequestMapping("customer/update") 
+	  @RequestMapping("/customers/update") 
 	  public String Update() { 
 		  return "/customers/Update"; 
 		  }
 	 
-	  @RequestMapping("order/detail") 
+	  @RequestMapping("/orders/detail") 
 	  public String OrderDetail() { 
 		  return "/orders/Detail"; 
 		  }
-	  @RequestMapping("order/register") 
+	  @RequestMapping("/orders/register") 
 	  public String OrderRegister() { 
 		  return "/orders/Register"; 
 		  }
-	  @RequestMapping("order/update") 
+	  @RequestMapping("/orders/update") 
 	  public String OrderUpdate() { 
 		  return "/orders/Update"; 
 		  }
-	  @RequestMapping("order/update") 
+	  @RequestMapping("/orders/list") 
 	  public String OrderList() { 
 		  return "/orders/List"; 
 		  }
 	  
-	  @RequestMapping("publisher/detail") 
+	  @RequestMapping("/publishers/detail") 
 	  public String PublisherDetail() { 
 		  return "/publishers/Detail"; 
 		  }
-	  @RequestMapping("publisher/register") 
+	  @RequestMapping("/publishers/register") 
 	  public String PublisherRegister() { 
 		  return "/publishers/Register"; 
 		  }
-	  @RequestMapping("publisher/update") 
+	  @RequestMapping("/publishers/update") 
 	  public String PublisherUpdate() { 
 		  return "/publishers/Update"; 
 		  }
-	  @RequestMapping("publisher/update") 
+	  @RequestMapping("/publishers/list") 
 	  public String PublisherList() { 
 		  return "/publishers/List"; 
 		  }

@@ -8,7 +8,7 @@
 
 <h2>회원 가입</h2>
 
-<form action="<%= application.getContextPath() %>/customers" method="post">
+<form action="<%= application.getContextPath() %>/customers/join" method="post">
   <div class="container">
     <label for="custId"><b>custId</b></label>
     	<input type="text" placeholder="Enter ID" name="custId" required>
