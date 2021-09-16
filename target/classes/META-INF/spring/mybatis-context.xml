@@ -3,9 +3,10 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="shop.tripn.oracle.book.domain.BookDto" alias="book"/>
-		<typeAlias type="shop.tripn.oracle.customer.domain.CustomerDto" alias="customer"/>
-		<typeAlias type="shop.tripn.oracle.order.domain.OrderDto" alias="order"/>
-		<typeAlias type="shop.tripn.oracle.publisher.domain.PublisherDto" alias="publisher"/>
+		<typeAlias type="shop.tripn.oracle.book.model.BookDto" alias="book"/>
+		<typeAlias type="shop.tripn.oracle.customer.model.CustomerDto" alias="customer"/>
+		<typeAlias type="shop.tripn.oracle.order.model.OrderDto" alias="order"/>
+		<typeAlias type="shop.tripn.oracle.publisher.model.PublisherDto" alias="publisher"/>
+		<typeAlias type="shop.tripn.oracle.photo.model.PhotoDto" alias="photo"/>
 	</typeAliases>
 </configuration>
