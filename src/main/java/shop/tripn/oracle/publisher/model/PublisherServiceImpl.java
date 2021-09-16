@@ -4,7 +4,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+import shop.tripn.oracle.common.mapper.PublisherMapper;
+
+@Service("publishermapper")
 public class PublisherServiceImpl implements PublisherService{
 	@Autowired PublisherMapper publishermapper;
 

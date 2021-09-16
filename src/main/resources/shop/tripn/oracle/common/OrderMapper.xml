@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.tripn.oracle.common.OrderMapper">
+	<insert id="save" parameterType="order">
+		insert into
+		orders(order_id, cust_id, book_id, order_price, order_date)
+		values(#{orderId}, #{custId}, #{bookId}, #{orderPrice}, #{orderDate})
+	</insert>
+	<select id="findAll" resultType="order">
+	select
+	    order_id orderId,
+	    cust_id custId,
+	    book_id bookId,
+	    order_price orderPrice,
+	    order_date orderDate
+    from orders
+	</select>
+	<select id="findById" resultType="order"
+	parameterType="int">
+	select
+	    order_id orderId,
+	    cust_id custId,
+	    book_id bookId,
+	    order_price orderPrice,
+	    order_date orderDate
+    from orders
+    where order_id like ${orderId}
+	</select>
+	<update id="update" parameterType="int">
+		update orders set
+			orderPrice = #{orderPrice},
+			orderDate = #{orderDate}
+		where order_id like #{orderId}
+	</update>
+	<delete id="delete" parameterType="string">
+		delete from orders
+		where order_id like #{orderId}
+	</delete>
+	<select id="findByCustId" resultType="order"
+	parameterType="int">
+	select
+	    order_id orderId,
+	    cust_id custId,
+	    book_id bookId,
+	    order_price orderPrice,
+	    order_date orderDate
+    from orders
+    where cust_id like ${custId}
+	</select>
+	<select id="findByBookId" resultType="order"
+	parameterType="int">
+	select
+	    order_id orderId,
+	    cust_id custId,
+	    book_id bookId,
+	    order_price orderPrice,
+	    order_date orderDate
+    from orders
+    where book_id like ${bookId}
+	</select>
+</mapper>

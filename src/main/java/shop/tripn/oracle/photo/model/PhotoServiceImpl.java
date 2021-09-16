@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import shop.tripn.oracle.common.mapper.PhotoMapper;
+
 @Service
 public class PhotoServiceImpl implements PhotoService{
 	@Autowired PhotoMapper photomapper;

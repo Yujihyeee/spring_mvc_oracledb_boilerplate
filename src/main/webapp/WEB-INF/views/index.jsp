@@ -29,10 +29,10 @@
 	<li><a href="${ctx}/move/orders/Update">Order Update</a></li>
 </ol>
 <ol>
-	<li><a href="${ctx}/move/pubblishers/Detail">Publisher Detail</a></li>
-	<li><a href="${ctx}/move/pubblishers/List">Publisher List</a></li>
-	<li><a href="${ctx}/move/pubblishers/Register">Publisher Register</a></li>
-	<li><a href="${ctx}/move/pubblishers/Update">Publisher Update</a></li>
+	<li><a href="${ctx}/move/publishers/Detail">Publisher Detail</a></li>
+	<li><a href="${ctx}/move/publishers/List">Publisher List</a></li>
+	<li><a href="${ctx}/move/publishers/Register">Publisher Register</a></li>
+	<li><a href="${ctx}/move/publishers/Update">Publisher Update</a></li>
 </ol>
 <ol>
 	<li><a href="${ctx}/move/photo/Detail">Photo Detail</a></li>

@@ -4,7 +4,7 @@ select
         	book_title bookTitle,
     		price,
 			pub_id pubId
-		from books
+		from books;
         WHERE book_id LIKE 8;
         
 
